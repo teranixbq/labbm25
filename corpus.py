@@ -14,6 +14,14 @@ QUERIES = {
 "Q3": "neural network search engine",
 }
 
+# "D2": "BM25 adalah algoritma ranking probabilistik yang digunakan dalam sistem information retrieval modern",
+# "D3": "Google dan Bing menggunakan berbagai teknik ranking termasuk machine learning dan neural network",
+# "D4": "inverted index adalah struktur data utama dalam sistem information retrieval untuk pencarian cepat",
+# "D5": "TF-IDF mengukur pentingnya sebuah term dalam dokumen relatif terhadap seluruh koleksi dokumen",
+# "D6": "BERT dan transformer digunakan dalam neural information retrieval untuk memahami semantik query",
+# "D7": "evaluasi sistem retrieval menggunakan metrik seperti precision recall MAP dan NDCG",
+# "D8": "query expansion meningkatkan recall dengan menambahkan term sinonim ke dalam query original",
+
 # Relevance judgments: {query_id: {doc_id: relevance_score}}
 # Skala: 0=tidak relevan, 1=relevan, 2=sangat relevan
 
