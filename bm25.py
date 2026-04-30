@@ -5,8 +5,6 @@ import math
 import re
 from collections import defaultdict
 
-from corpus import CORPUS
-
 def tokenize(text: str) -> list[str]:
     text = text.lower()
     text = re.sub(r"[^\w\s]", "", text)
