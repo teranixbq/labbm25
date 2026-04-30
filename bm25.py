@@ -80,12 +80,11 @@ def compute_idf(term: str, N: int, df: dict) -> float:
     return idf
 
 
-def compute_bm25_score(query_terms: list, doc_id: str, index: dict, k1: float, b: float) -> float:
+def compute_bm25_score(query_terms: list, doc_id: str, index: dict, k1: float = 1.0, b: float = 0.75) -> float:
     """
     Hitung BM25 score untuk satu pasang (query, dokumen).
     Input : query_terms = list of tokens query
-    doc_id = id dokumen target
-    index = inverted index dari build_index()
+    doc_id = id dokumen target dari build_index()
     k1, b = parameter BM25
     Output: float, skor BM25
     """
@@ -94,6 +93,9 @@ def compute_bm25_score(query_terms: list, doc_id: str, index: dict, k1: float, b
     doc_tf = index['tf'].get(doc_id, {})
     doc_len = index['dl'].get(doc_id, 0)
     
+    if len(query_terms) == 0:
+        return 0.0
+
     for term in query_terms:
         idf = compute_idf(term, index['N'], index['df'])
         tf = doc_tf.get(term, 0)
