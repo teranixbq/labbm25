@@ -29,7 +29,6 @@ def main():
 
     matplotlib_bar_chart(all_results)
 
-
 # Fungsi untuk membuat bar chart menggunakan matplotlib menggunakan tight_layout
 def matplotlib_bar_chart(all_results):
     qids = list(all_results.keys())
