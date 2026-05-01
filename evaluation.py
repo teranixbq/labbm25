@@ -1,6 +1,6 @@
 # evaluation.py — Metrik evaluasi NDCG
 # Nama : Hanief Fathul Bahri Ahmad
-# NIM : ___________________________
+# NIM : 14250028
 
 import math
 

@@ -1,6 +1,7 @@
 # bm25.py — Implementasi BM25 dari prinsip pertama
 # Nama : Hanief Fathul Bahri Ahmad
-# NIM : ___________________________
+# NIM : 14250028
+
 import math
 import re
 from collections import defaultdict

@@ -32,10 +32,6 @@ def main():
 
 # Fungsi untuk membuat bar chart menggunakan matplotlib menggunakan tight_layout
 def matplotlib_bar_chart(all_results):
-    if plt is None:
-        print("matplotlib tidak tersedia.")
-        return
-
     qids = list(all_results.keys())
     if not qids: #kalau kosong gagal buat chart
         print("Tidak ada hasil untuk ditampilkan.")
