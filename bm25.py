@@ -5,11 +5,21 @@ import math
 import re
 from collections import defaultdict
 
+Stopword_Indonesia = ["dan","dalam","untuk","yang","ke","dengan","adalah","sebuah","seperti"]
+
 def tokenize(text: str) -> list[str]:
     text = text.lower()
     text = re.sub(r"[^\w\s]", "", text)
     tokens = text.split()
-    return tokens
+    
+    # Implement Stopword
+    filtered_stopword = []
+    for token in tokens:
+        if token not in Stopword_Indonesia:
+            filtered_stopword.append(token)
+            
+    return filtered_stopword
+
 
 
 def build_index(corpus: dict) -> dict:
@@ -80,7 +90,7 @@ def compute_idf(term: str, N: int, df: dict) -> float:
     return idf
 
 
-def compute_bm25_score(query_terms: list, doc_id: str, index: dict, k1: float = 1.0, b: float = 0.75) -> float:
+def compute_bm25_score(query_terms: list, doc_id: str, index: dict, k1: float , b: float ) -> float:
     """
     Hitung BM25 score untuk satu pasang (query, dokumen).
     Input : query_terms = list of tokens query
